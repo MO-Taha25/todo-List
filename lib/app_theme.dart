@@ -11,18 +11,39 @@ class AppTheme {
   static const Color rad = Color(0xFFEC4B4B);
 
   static ThemeData lightTheme = ThemeData(
-      primaryColor: primary,
-      scaffoldBackgroundColor: backgraundLight,
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: white,
-        selectedItemColor: primary,
-        unselectedItemColor: gray,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+    primaryColor: primary,
+    scaffoldBackgroundColor: backgraundLight,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: white,
+      selectedItemColor: primary,
+      unselectedItemColor: gray,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primary,
+      foregroundColor: white,
+      shape: CircleBorder(
+        side: BorderSide(width: 4, color: white),
       ),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: primary,
-          foregroundColor: white,
-          shape: CircleBorder(side: BorderSide(width: 4, color: white))));
+    ),
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(
+        fontSize: 32,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 24,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 14,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
   static ThemeData darkTheme = ThemeData();
 }
