@@ -4,6 +4,8 @@ import 'package:todo/app_theme.dart';
 import 'package:todo/tabs/tasks/task_item.dart';
 
 class TasksTab extends StatelessWidget {
+  const TasksTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     double Sizhight = MediaQuery.sizeOf(context).height;
@@ -29,11 +31,11 @@ class TasksTab extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: Sizhight * .15),
               child: EasyInfiniteDateTimeLine(
-                firstDate: DateTime.now().subtract(Duration(days: 365)),
+                firstDate: DateTime.now().subtract(const Duration(days: 365)),
                 focusDate: DateTime.now(),
-                lastDate: DateTime.now().add(Duration(days: 365)),
+                lastDate: DateTime.now().add(const Duration(days: 365)),
                 showTimelineHeader: false,
-                dayProps: EasyDayProps(
+                dayProps: const EasyDayProps(
                   height: 100,
                   width: 60,
                   dayStructure: DayStructure.dayStrDayNum,
@@ -80,7 +82,7 @@ class TasksTab extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
-            itemBuilder: (_, index) => TaskItem(),
+            itemBuilder: (_, index) => const TaskItem(),
             itemCount: 10,
           ),
         )
