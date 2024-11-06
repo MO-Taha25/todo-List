@@ -34,12 +34,12 @@ class AppTheme {
           fontWeight: FontWeight.bold,
         ),
         titleMedium: TextStyle(
-          fontSize: 24,
+          fontSize: 18,
           color: black,
           fontWeight: FontWeight.bold,
         ),
         titleSmall: TextStyle(
-          fontSize: 18,
+          fontSize: 16,
           color: black,
           fontWeight: FontWeight.bold,
         ),

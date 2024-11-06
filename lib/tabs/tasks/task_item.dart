@@ -25,15 +25,15 @@ class TaskItem extends StatelessWidget {
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(
               'Play Basketball',
-              style: textTheme.bodySmall?.copyWith(color: AppTheme.primary),
+              style: textTheme.titleMedium?.copyWith(color: AppTheme.primary),
             ),
             Text(
-              'Text Descriptions ',
-              style: textTheme.bodySmall?.copyWith(fontSize: 14),
+              'Text Descriptions Text Descriptions ',
+              style: textTheme.titleSmall?.copyWith(fontSize: 14),
             ),
           ]),
           const SizedBox(
-            width: 10,
+            width: 20,
           ),
           Container(
             height: 34,
