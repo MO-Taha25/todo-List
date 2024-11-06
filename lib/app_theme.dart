@@ -11,42 +11,44 @@ class AppTheme {
   static const Color rad = Color(0xFFEC4B4B);
 
   static ThemeData lightTheme = ThemeData(
-      primaryColor: primary,
-      scaffoldBackgroundColor: backgraundLight,
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: white,
-        selectedItemColor: primary,
-        unselectedItemColor: gray,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+    primaryColor: primary,
+    scaffoldBackgroundColor: backgraundLight,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: white,
+      selectedItemColor: primary,
+      unselectedItemColor: gray,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primary,
+      foregroundColor: white,
+      shape: CircleBorder(
+        side: BorderSide(width: 4, color: white),
       ),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
+    ),
+    textTheme: TextTheme(
+      titleLarge: TextStyle(
+        fontSize: 32,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 18,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 16,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
         backgroundColor: primary,
-        foregroundColor: white,
-        shape: CircleBorder(
-          side: BorderSide(width: 4, color: white),
-        ),
       ),
-      textTheme: TextTheme(
-        titleLarge: TextStyle(
-          fontSize: 32,
-          color: black,
-          fontWeight: FontWeight.bold,
-        ),
-        titleMedium: TextStyle(
-          fontSize: 18,
-          color: black,
-          fontWeight: FontWeight.bold,
-        ),
-        titleSmall: TextStyle(
-          fontSize: 16,
-          color: black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-        backgroundColor: primary,
-      )));
+    ),
+  );
   static ThemeData darkTheme = ThemeData();
 }

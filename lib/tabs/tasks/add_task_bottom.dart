@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:todo/app_theme.dart';
 import 'package:todo/default_elevated_botton.dart';
+import 'package:todo/models/task_model.dart';
 import 'package:todo/widget/default_text_from_feld.dart';
 
 class AddTaskBottom extends StatefulWidget {
@@ -107,6 +108,10 @@ class _AddTaskBottomState extends State<AddTaskBottom> {
   }
 
   void addText() {
-    print('added task');
+    TaskModel taskModel = TaskModel(
+      title: textEditingController.text,
+      description: descriptionEditingController.text,
+      date: selectDate,
+    );
   }
 }
