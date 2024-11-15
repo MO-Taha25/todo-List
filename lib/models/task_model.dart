@@ -10,4 +10,19 @@ class TaskModel {
       required this.description,
       required this.date,
       this.isDone = false});
+  TaskModel.fromJson(Map<String, dynamic> Json)
+      : this(
+          id: Json['id'],
+          title: Json['title'],
+          description: Json['description'],
+          date: Json['date'],
+          isDone: Json['isDone'],
+        );
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'title': title,
+        'description': description,
+        'date': date,
+        'isDone': isDone,
+      };
 }
