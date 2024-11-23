@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class TaskModel {
   String id;
   String title;
@@ -15,14 +17,14 @@ class TaskModel {
           id: Json['id'],
           title: Json['title'],
           description: Json['description'],
-          date: Json['date'],
+          date: (Json['date'] as Timestamp).toDate(),
           isDone: Json['isDone'],
         );
   Map<String, dynamic> toJson() => {
         'id': id,
         'title': title,
         'description': description,
-        'date': date,
+        'date': Timestamp.fromDate(date),
         'isDone': isDone,
       };
 }
