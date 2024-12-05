@@ -5,7 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/app_theme.dart';
-import 'package:todo/default_elevated_botton.dart';
+import 'package:todo/widget/default_elevated_botton.dart';
 import 'package:todo/firebase_functions.dart';
 import 'package:todo/models/task_model.dart';
 import 'package:todo/tabs/tasks/task_provider.dart';
@@ -70,7 +70,7 @@ class _AddTaskBottomState extends State<AddTaskBottom> {
               Text(
                 'Select Date',
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      color: AppTheme.black,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
               ),
               SizedBox(
@@ -92,10 +92,8 @@ class _AddTaskBottomState extends State<AddTaskBottom> {
                 },
                 child: Text(
                   dateFormat.format(selectDate).toString(),
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleSmall
-                      ?.copyWith(color: AppTheme.black),
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                      color: Theme.of(context).colorScheme.onPrimary),
                 ),
               ),
               SizedBox(

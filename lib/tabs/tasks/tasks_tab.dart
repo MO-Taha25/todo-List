@@ -37,7 +37,7 @@ class _TasksTabState extends State<TasksTab> {
               child: SafeArea(
                 child: Text(
                   'ToDo List',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppTheme.white,
                       ),
                 ),
@@ -80,17 +80,17 @@ class _TasksTabState extends State<TasksTab> {
                       borderRadius: BorderRadius.all(
                         Radius.circular(5),
                       ),
-                      color: AppTheme.white,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                     dayNumStyle: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: AppTheme.black,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                     dayStrStyle: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: AppTheme.black,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                   ),
                   todayStyle: DayStyle(
@@ -98,7 +98,7 @@ class _TasksTabState extends State<TasksTab> {
                       borderRadius: BorderRadius.all(
                         Radius.circular(5),
                       ),
-                      color: AppTheme.white,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                     dayNumStyle: TextStyle(
                       fontSize: 15,

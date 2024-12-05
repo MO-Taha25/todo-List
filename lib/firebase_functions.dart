@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:todo/models/task_model.dart';
 
 class FirebaseFunctions {
@@ -24,5 +25,14 @@ class FirebaseFunctions {
   static Future<void> deleteTaskFromFirebase(String taskId) async {
     CollectionReference<TaskModel> tasksCollection = gitTaskCollection();
     return tasksCollection.doc(taskId).delete();
+  }
+
+  static Future<void> editTaskFromFirebase(
+      String taskId, String nweTask) async {
+    CollectionReference<TaskModel> tasksCollection = gitTaskCollection();
+    await FirebaseFirestore.instance
+        .collection('tasksCollection')
+        .doc(taskId)
+        .update({'titel': nweTask});
   }
 }

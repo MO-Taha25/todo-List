@@ -13,6 +13,10 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     primaryColor: primary,
     scaffoldBackgroundColor: backgraundLight,
+    appBarTheme: AppBarTheme(
+      color: Colors.transparent,
+      centerTitle: true,
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: white,
       selectedItemColor: primary,
@@ -34,7 +38,7 @@ class AppTheme {
         fontWeight: FontWeight.bold,
       ),
       titleMedium: TextStyle(
-        fontSize: 18,
+        fontSize: 24,
         color: black,
         fontWeight: FontWeight.bold,
       ),
@@ -49,6 +53,64 @@ class AppTheme {
         backgroundColor: primary,
       ),
     ),
+    colorScheme: ColorScheme.light(
+      primary: primary,
+      secondary: white,
+      onPrimary: black,
+      onSecondary: black,
+      onSurface: black,
+    ),
   );
-  static ThemeData darkTheme = ThemeData();
+  static ThemeData darkTheme = ThemeData(
+    primaryColor: primary,
+    scaffoldBackgroundColor: backgraundDark,
+    appBarTheme: AppBarTheme(
+      color: Colors.transparent,
+      centerTitle: true,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: black,
+      selectedItemColor: primary,
+      unselectedItemColor: gray,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primary,
+      foregroundColor: white,
+      shape: CircleBorder(
+        side: BorderSide(width: 4, color: white),
+      ),
+    ),
+    textTheme: TextTheme(
+      titleLarge: TextStyle(
+        fontSize: 32,
+        color: black,
+        fontWeight: FontWeight.bold,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 24,
+        color: white,
+        fontWeight: FontWeight.bold,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 16,
+        color: white,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primary,
+      ),
+    ),
+    colorScheme: ColorScheme.dark(
+      primary: primary,
+      secondary: black,
+      onPrimary: white,
+      onSecondary: white,
+      onSurface: white,
+      onError: black,
+    ),
+  );
 }

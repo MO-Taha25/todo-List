@@ -14,8 +14,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
-    const TasksTab(),
-    const SettingsTab(),
+    TasksTab(),
+    SettingsScreen(),
   ];
   int currentTabIndex = 0;
 
@@ -24,9 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: tabs[currentTabIndex],
       bottomNavigationBar: BottomAppBar(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
         color: Colors.white,
-        shape: const CircularNotchedRectangle(),
+        shape: CircularNotchedRectangle(),
         clipBehavior: Clip.hardEdge,
         notchMargin: 10,
         child: BottomNavigationBar(
